@@ -8,10 +8,10 @@ class Tablero:
         self.inicio = (5, 1) # Pacman empieza abajo a la izquierda
         self.meta = (1, 5)   # La meta está arriba a la derecha
         
-        # Aquí elegimos qué "cerebro" usar (puedes cambiarlo luego)
+        # Aquí se elige qué "cerebro" usar
         self.motor = None
     
-    def obtener_ruta_amplitud(self):
+    def obtener_ruta_amplitud(self): 
         self.motor = BusquedaAmplitud(self.tamano)
         """Llama al motor de IA para que resuelva el laberinto"""
         return self.motor.buscar(self.inicio, self.meta)
